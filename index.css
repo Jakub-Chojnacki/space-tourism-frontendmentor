@@ -492,6 +492,25 @@ body {
       background-image: url(./assets/crew/background-crew-desktop.jpg);
   }
 } 
+/* technology */
+.technology {
+  background-image: url(./assets/technology/background-technology-mobile.jpg);
+  background-position: center center;
+  
+}
+
+@media (min-width: 35rem) {
+  .technology {
+      background-position: center center;
+      background-image: url(./assets/technology/background-technology-tablet.jpg);
+  }
+}
+
+@media (min-width: 45rem) {
+  .technology {
+      background-image: url(./assets/technology/background-technology-desktop.jpg);
+  }
+} 
 
 /* ----------------------------- */
 /* Layout                        */
@@ -518,7 +537,7 @@ body {
   aspect-ratio: 1;
   border-radius: 50%;
   border: 1px solid hsl(var(--clr-white)/0.5);
-  padding: 0 0.75em;
+  padding: 0 1.25em;
 }
 
 .number-indicators button[aria-selected="true"]{
@@ -591,6 +610,32 @@ body {
 .crew-details h2 {
   color: hsl( var(--clr-white) / .5);
 }
+
+/*  technology layout */
+
+.grid-container--technology {
+  --flow-space: 2rem;
+  grid-template-areas: 
+      'title'
+      'image'
+      'tabs'
+      'content';
+}
+
+.grid-container--technology > picture {
+  grid-area: image;
+  border-bottom: 1px solid hsl( var(--clr-white) / .1);
+}
+
+.grid-container--technology > .number-indicators{
+  grid-area: tabs;
+}
+
+.grid-container--technology > .technology-details {
+  grid-area: content;
+}
+
+
 
 @media (min-width: 35em) {
   .numbered-title {
@@ -668,4 +713,18 @@ body {
       max-width: 90%;
   }
 
+  .grid-container--technology {
+    grid-template-columns: minmax(1rem, 1fr) minmax(0,8rem) minmax(0, 37rem) minmax(0, 23rem) minmax(1rem, 1fr);
+    align-items:center;
+    grid-template-areas: 
+        '. title title image image'
+        '. tabs content image image'
+        '. tabs  content image  image';
+  }
+
+  .number-indicators { 
+    flex-direction: column;
+  }
+
 }
+
