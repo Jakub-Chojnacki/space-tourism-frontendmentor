@@ -538,6 +538,7 @@ body {
   border-radius: 50%;
   border: 1px solid hsl(var(--clr-white)/0.5);
   padding: 0 1.25em;
+  cursor: pointer;
 }
 
 .number-indicators button[aria-selected="true"]{
@@ -656,6 +657,14 @@ body {
           'tabs'
           'image';
   }
+
+  .technology-details{
+    padding: 0 4rem;
+  }
+
+ 
+
+
   
   
 }

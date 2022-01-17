@@ -36,25 +36,54 @@
   <main id="main" class="grid-container grid-container--technology flow ">
     <h1 class="numbered-title ff-sans-normal fs-600 letter-spacing-1"><span aria-hidden="true">03</span> Space launch 101</h1>
     
-    <div class="number-indicators flex">
-      <button aria-selected="true" class="bg-dark text-white ff-serif">1</button>
-      <button aria-selected="false" class="bg-dark text-white ff-serif">2</button>
-      <button aria-selected="false" class="bg-dark text-white ff-serif">3</button>
+    <div class="number-indicators flex" role="tablist">
+      <button aria-selected="true"  aria-controls="capsule-tab"  data-image="capsule-image" class="bg-dark text-white ff-serif" role="tab" tabindex="0"><span>1</span></button>
+      <button aria-selected="false"  aria-controls="spaceport-tab" data-image="spaceport-image" class="bg-dark text-white ff-serif"  role="tab" tabindex="-1"><span>2</span></button>
+      <button aria-selected="false" aria-controls="vehicle-tab" data-image="vehicle-image" class="bg-dark text-white ff-serif"  role="tab" tabindex="-1"><span>3</span></button>
   </div>
   
-  <article class=" flow technology-details"  role="tabpanel" tabindex="0">
+  <!-- space capsule -->
+  <article  class=" flow technology-details"  id="capsule-tab" role="tabpanel" tabindex="0">
     <header class="flow flow--space-small">
       <h2 class="fs-400 ff-sans-cond uppercase text-accent letter-spacing-2">The terminology...</h2>
       <p class="fs-700 uppercase ff-serif">Space capsule</p>
     </header>
     <p class="text-accent">A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained.</p>
+  </article>
+
+<!-- spaceport -->
+  <article hidden class=" flow technology-details" id="spaceport-tab" role="tabpanel" tabindex="0">
+    <header class="flow flow--space-small">
+      <h2 class="fs-400 ff-sans-cond uppercase text-accent letter-spacing-2">The terminology...</h2>
+      <p class="fs-700 uppercase ff-serif">Spaceport</p>
+    </header>
+    <p class="text-accent">A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch.</p>
   </article> 
 
-  <picture id="space_capsule-image">
-    <source media="(max-width:500px)" srcset="assets/technology/image-space-capsule-landscape.jpg" alt="space capsule">
+<!-- vehicle -->
+  <article hidden class=" flow technology-details" id="vehicle-tab"  role="tabpanel" tabindex="0">
+    <header class="flow flow--space-small">
+      <h2 class="fs-400 ff-sans-cond uppercase text-accent letter-spacing-2">The terminology...</h2>
+      <p class="fs-700 uppercase ff-serif"> <span>Launch vehicle</span></p>
+    </header>
+    <p class="text-accent">A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!</p>
+  </article> 
+
+  <picture id="capsule-image">
+    <source media="(max-width:44.99rem)" srcset="assets/technology/image-space-capsule-landscape.jpg" alt="space capsule">
     <img src="assets/technology/image-space-capsule-portrait.jpg">
-    
   </picture>
+
+  <picture hidden id="spaceport-image">
+    <source media="(max-width:44.99rem)" srcset="assets/technology/image-spaceport-landscape.jpg" alt="space capsule">
+    <img src="assets/technology/image-spaceport-portrait.jpg">
+  </picture>
+
+  <picture hidden id="vehicle-image">
+    <source media="(max-width:44.99rem)" srcset="assets/technology/image-launch-vehicle-landscape.jpg" alt="space capsule">
+    <img src="assets/technology/image-launch-vehicle-portrait.jpg">
+  </picture>
+  
   
   </main>
   
